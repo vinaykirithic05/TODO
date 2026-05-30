@@ -31,9 +31,7 @@ app.use(notFound);
 // Custom central error handler to format all responses
 app.use(errorHandler)
 
-app.get('/',(req,res)=>{
-    res.send('API is Running Successfully !')
-})
+
 
 app.listen(process.env.PORT , ()=>{
     console.log(`Server is Running on PORT : ${process.env.PORT}`);
