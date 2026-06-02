@@ -71,14 +71,14 @@ const Register = () => {
         </div>
         <div className="w-full flex flex-col space-y-4 p-10 text-left">
           <div className="flex flex-col space-y-2 gap-2">
-            <label className="text-sm font-bold tracking-wider uppercase">
+            <label className="text-[10px] uppercase text-on-surface-variant font-bold tracking-wide">
               Username
             </label>
             <div className="relative flex items-center ">
               <User className="absolute left-4 w-4 h-4" />
               <input
                 type="text"
-                className="border border-white/20 bg-background/50 w-full py-3.5 pl-12 pr-4 rounded-2xl placeholder-on-surface focus:outline-hidden focus:border-primary transition-colors duration-300"
+                className="border border-white/5 bg-surface-container-lowest w-full py-3.5 pl-12 pr-4 rounded-2xl placeholder-on-surface focus:outline-hidden focus:border-primary transition-colors duration-300"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="John Doe"
@@ -86,14 +86,14 @@ const Register = () => {
             </div>
           </div>
           <div className="flex flex-col space-y-2 gap-2">
-            <label className="text-sm font-bold tracking-wider uppercase">
+            <label className="text-[10px] uppercase text-on-surface-variant font-bold tracking-wide">
               Email Address
             </label>
             <div className="relative flex items-center ">
               <Mail className="absolute left-4 w-4 h-4" />
               <input
                 type="text"
-                className="border border-white/20 bg-background/50 w-full py-3.5 pl-12 pr-4 rounded-2xl placeholder-on-surface focus:outline-hidden focus:border-primary transition-colors duration-300"
+                className="border border-white/5 bg-surface-container-lowest w-full py-3.5 pl-12 pr-4 rounded-2xl placeholder-on-surface focus:outline-hidden focus:border-primary transition-colors duration-300"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@company.com"
@@ -101,7 +101,7 @@ const Register = () => {
             </div>
           </div>
           <div className="flex flex-col space-y-2 gap-2">
-            <label className="text-sm font-bold tracking-wider uppercase">
+            <label className="text-[10px] uppercase text-on-surface-variant font-bold tracking-wide">
               Password
             </label>
             <div className="relative flex items-center">
@@ -109,7 +109,7 @@ const Register = () => {
               <input
                 type={showPassword ? "text" : "password"}
                 onChange={(e)=>setPassword(e.target.value)}
-                className="border border-white/20 bg-background/50 w-full py-3.5 pl-12 pr-4 rounded-2xl placeholder-on-surface focus:outline-hidden focus:border-primary transition-colors duration-500"
+                className="border border-white/5 bg-surface-container-lowest w-full py-3.5 pl-12 pr-4 rounded-2xl placeholder-on-surface focus:outline-hidden focus:border-primary transition-colors duration-500"
                 placeholder="......."
               />
               <button

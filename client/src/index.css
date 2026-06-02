@@ -65,3 +65,18 @@
 @utility primary-gradient {
   background: linear-gradient(135deg, #8083ff 0%, #b76dff 100%);
 }
+/* Custom Autofill Styles to Match Dark Theme */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  /* 1. Force the text color to match your design token's text color */
+  -webkit-text-fill-color: #dae2fd !important;
+  
+  /* 2. Fill the background using a thick inset shadow matching your dark background */
+  -webkit-box-shadow: 0 0 0px 1000px #131b2e inset !important;
+  
+  /* 3. Slow down transition delays so Chrome cannot re-apply its default styles */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
