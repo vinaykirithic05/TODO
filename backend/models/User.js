@@ -11,10 +11,10 @@ const userSchema = new mongoose.Schema(
     ,{timestamps:true}
 )
 // Pre Save Middleware to Hash the password which runs automatically before it saves the document in the database
-userSchema.pre('save',async function (next) {
+userSchema.pre('save',async function () {
     //Check if the password is modified
     if(!this.isModified('password')){
-        return next(); 
+        return ; 
         // if not modified ,bypass hashing and move on
     }
     try {
@@ -22,10 +22,10 @@ userSchema.pre('save',async function (next) {
         const salt = await bcryptjs.genSalt(10);
         // Hashing the plain-text password using the salt
         this.password = await bcryptjs.hash(this.password,salt)
-        // Call next() proceed with the database save
-        next()
+       
+    
     } catch (error) {
-        next(error)
+       throw error
     }
 })
 // Comparing the Password
